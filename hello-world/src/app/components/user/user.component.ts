@@ -10,6 +10,8 @@ export class UserComponent implements OnInit {
   age:number;
   email:string;
   address:Address;
+  hobbies:string[];
+  hello:any;
 
   constructor() { }
 
@@ -21,7 +23,9 @@ export class UserComponent implements OnInit {
       street: '50 Main st',
       city: 'Boston',
       state: 'MA'
-    }
+    };
+    this.hobbies = ['Read', 'Programming', 'Outdoor Activities'];
+    this.hello = 'Hello';
   }
 
 }
