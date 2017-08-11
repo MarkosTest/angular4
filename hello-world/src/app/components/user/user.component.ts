@@ -28,6 +28,15 @@ export class UserComponent implements OnInit {
     this.hello = 'Hello';
   }
 
+  onClick(){
+    console.log('Hello!');
+    this.hobbies.push('Swimming')
+  }
+
+  addHobby(hobby:string){
+    this.hobbies.unshift(hobby);
+    return false;
+  }
 }
 
 interface Address {
