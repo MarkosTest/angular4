@@ -7,8 +7,9 @@
 </ul>
 
 <button (click)="onClick()">Click me!</button>
+<button (click)="toggleEditUser()">Edit User</button>
 
-<form>
+<form *ngIf="isEdit">
   <div>
     <label for="name">Name: </label><br>
     <input type="text" [(ngModel)]="name" name="name">
@@ -48,3 +49,9 @@
     <button (click)='deleteHobby(hobby)'>X</button> {{i+1}}: {{hobby}}
   </li>
 </ul>
+
+<h1>Posts</h1>
+<div *ngFor="let post of posts">
+    <h4>{{post.title}}</h4>
+    <p>{{post.body}}</p>
+</div>
